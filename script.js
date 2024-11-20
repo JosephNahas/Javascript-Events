@@ -48,3 +48,11 @@ focusInput.addEventListener('focus', function() {
 focusInput.addEventListener('blur', function(){
     focusResult.innerHTML = 'Focus lost!';
 });
+
+let fruits = document.getElementById('fruits');
+let favoriteFruit = document.getElementById('favorite-fruit');
+
+fruits.addEventListener('click', function(event){
+    if (event.target.tagName === 'BUTTON')
+        favoriteFruit.innerHTML = event.target.innerHTML;
+});
