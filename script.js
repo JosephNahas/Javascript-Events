@@ -37,3 +37,14 @@ form.addEventListener('submit', function(event){
     else
         submitMessage.innerHTML = 'Fill out the form first!';
 });
+
+let focusInput = document.getElementById('focus');
+let focusResult = document.getElementById('focus-result');
+
+focusInput.addEventListener('focus', function() {
+    focusResult.innerHTML = 'Input focused!';
+});
+
+focusInput.addEventListener('blur', function(){
+    focusResult.innerHTML = 'Focus lost!';
+});
